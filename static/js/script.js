@@ -46,7 +46,7 @@ $(document).ready(function() {
   });
 
   socket.on('server_message', function(data) {
-    $('#receiver').html();
+    $('#receiver').html('');
     for (var i = 0; i < data.length; i++) {
       var item = data[i];
       $('#receiver').append('<li data-id="' + item.id + '">' + item.title + ' - ' + item.platform + '</li>');  
